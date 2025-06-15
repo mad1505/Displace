@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Bush
+  - Enemy
+  - Obstacle
+  - Boss
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - PlayerLayer
+  - EnemyLayer
+  - GroundLayer
+  - BushLayer
+  - Boss
+  - PlayerProjectile
+  - Wall
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: 1
+    uniqueID: 2804888539
+    locked: 0
+  - name: 2
+    uniqueID: 2851308229
+    locked: 0
+  - name: asap
+    uniqueID: 3791145927
+    locked: 0
+  - name: 3
+    uniqueID: 2178763
+    locked: 0
+  - name: bukit
+    uniqueID: 3457815765
+    locked: 0
+  - name: pohon
+    uniqueID: 3925098555
+    locked: 0
+  - name: rumputback
+    uniqueID: 3982588493
+    locked: 0
+  - name: 4
+    uniqueID: 4016963017
+    locked: 0
+  - name: 5
+    uniqueID: 2424978149
+    locked: 0
+  - name: 6
+    uniqueID: 839364275
+    locked: 0
+  - name: apibel
+    uniqueID: 694643205
+    locked: 0
+  - name: musuh
+    uniqueID: 202693285
+    locked: 0
+  - name: musuh1
+    uniqueID: 3344073319
+    locked: 0
+  - name: musu2
+    uniqueID: 596637417
+    locked: 0
+  - name: musuh3
+    uniqueID: 1160770795
+    locked: 0
+  - name: musuh4
+    uniqueID: 2522996269
+    locked: 0
+  - name: musuh5
+    uniqueID: 2744741097
+    locked: 0
+  - name: 7
+    uniqueID: 3439497037
+    locked: 0
+  - name: api
+    uniqueID: 3221701623
+    locked: 0
+  - name: 8
+    uniqueID: 1891540501
+    locked: 0
+  - name: rumput
+    uniqueID: 3004904687
+    locked: 0
+  - name: 9
+    uniqueID: 723044441
+    locked: 0
+  - name: 10
+    uniqueID: 960018705
+    locked: 0

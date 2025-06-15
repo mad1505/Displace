@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d902deb01e41594786ccfd4510b911b, type: 3}
+  m_Name: PlayerSkillConfig
+  m_EditorClassIdentifier: 
+  roarCooldown: 5
+  roarDamage: 20
+  roarRange: 10
+  roarKnockbackForce: 5
+  roarStunDuration: 2
+  roarEffectPrefab: {fileID: 0}
+  stealthDuration: 5
+  stealthSpeedMultiplier: 0.5
+  stealthCooldown: 10
+  stealthEffectPrefab: {fileID: 0}
+  walkSpeed: 5
+  runSpeed: 8
+  jumpForce: 10
+  dashSpeed: 15
+  dashDuration: 0.5
+  dashCooldown: 2

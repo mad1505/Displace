@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1741e8229bfad974887a0c6c74af9ff1, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  playerMaxHealth: 100
+  playerRespawnDelay: 2
+  maxLives: 3
+  checkpointActivationRange: 2
+  checkpointActiveColor: {r: 0, g: 1, b: 0, a: 1}
+  checkpointInactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  healthBarUpdateSpeed: 5
+  fadeInDuration: 1
+  fadeOutDuration: 1
+  masterVolume: 1
+  musicVolume: 0.7
+  sfxVolume: 1
+  ambientVolume: 0.5
