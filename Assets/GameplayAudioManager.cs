@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 // Handle audio gameplay
 // Script ngatur suara saat gameplay
 public class GameplayAudioManager : MonoBehaviour
 {
     public static GameplayAudioManager instance;    // Instance singleton
+    private string currentScene;                   // Scene saat ini
 
     [Header("Audio Sources")]
     public AudioSource musicSource;                // Source musik
@@ -37,12 +39,29 @@ public class GameplayAudioManager : MonoBehaviour
         }
 
         SetupAudioSources();
+        currentScene = SceneManager.GetActiveScene().name;
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        // Mulai musik latar
-        PlayBackgroundMusic();
+        // Subscribe ke event scene loaded
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe dari event scene loaded
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Jika pindah scene, stop semua audio
+        if (scene.name != currentScene)
+        {
+            StopAllAudio();
+        }
+        currentScene = scene.name;
     }
 
     void SetupAudioSources()
@@ -83,6 +102,10 @@ public class GameplayAudioManager : MonoBehaviour
 
     public void PlayBackgroundMusic()
     {
+        // Cek apakah masih di scene yang sama
+        if (SceneManager.GetActiveScene().name != currentScene)
+            return;
+
         if (musicSource != null && backgroundMusic != null)
         {
             musicSource.clip = backgroundMusic;
@@ -100,6 +123,10 @@ public class GameplayAudioManager : MonoBehaviour
 
     public void PlayEnemyAttackSound()
     {
+        // Cek apakah masih di scene yang sama
+        if (SceneManager.GetActiveScene().name != currentScene)
+            return;
+
         if (enemySource != null && enemyAttackSound != null)
         {
             enemySource.PlayOneShot(enemyAttackSound);
@@ -108,6 +135,10 @@ public class GameplayAudioManager : MonoBehaviour
 
     public void PlayPlayerHealSound()
     {
+        // Cek apakah masih di scene yang sama
+        if (SceneManager.GetActiveScene().name != currentScene)
+            return;
+
         if (playerSource != null && playerHealSound != null)
         {
             playerSource.PlayOneShot(playerHealSound);
@@ -130,5 +161,18 @@ public class GameplayAudioManager : MonoBehaviour
         {
             sfxMixerGroup.audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
         }
+    }
+
+    // Stop semua audio
+    private void StopAllAudio()
+    {
+        if (musicSource != null)
+            musicSource.Stop();
+        if (sfxSource != null)
+            sfxSource.Stop();
+        if (enemySource != null)
+            enemySource.Stop();
+        if (playerSource != null)
+            playerSource.Stop();
     }
 } 
